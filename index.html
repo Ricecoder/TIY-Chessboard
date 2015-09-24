@@ -1,169 +1,196 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Chess Board</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css"></link>
-  </head>
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Chess Board</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css"></link>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-    <table>
-      <tr class="col-heading">
-        <th scope="col"></th>
-        <th scope="col">A</th>
-        <th scope="col">B</th>
-        <th scope="col">C</th>
-        <th scope="col">D</th>
-        <th scope="col">E</th>
-        <th scope="col">F</th>
-        <th scope="col">G</th>
-        <th scope="col">H</th>
-      </tr>
+        <!-- Add your site or application content here -->
 
-      <tr id="eighth">
-        <th class="row-heading" scope="row">8</th>
+      <table>
+        <tr class="col-heading">
+          <th scope="col"></th>
+          <th scope="col">A</th>
+          <th scope="col">B</th>
+          <th scope="col">C</th>
+          <th scope="col">D</th>
+          <th scope="col">E</th>
+          <th scope="col">F</th>
+          <th scope="col">G</th>
+          <th scope="col">H</th>
+        </tr>
 
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
+        <tr id="eighth">
+          <th class="row-heading" scope="row">8</th>
 
-        <th class="row-heading" scope="row">8</th>
-      </tr>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
 
-      <tr id="seventh">
-        <th class="row-heading" scope="row">7</th>
+          <th class="row-heading" scope="row">8</th>
+        </tr>
 
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
+        <tr id="seventh">
+          <th class="row-heading" scope="row">7</th>
 
-        <th class="row-heading" scope="row">7</th>
-      </tr>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
 
-      <tr id="sixth">
-        <th class="row-heading" scope="row">6</th>
+          <th class="row-heading" scope="row">7</th>
+        </tr>
 
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
+        <tr id="sixth">
+          <th class="row-heading" scope="row">6</th>
 
-        <th class="row-heading" scope="row">6</th>
-      </tr>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
 
-      <tr id="fifth">
-        <th class="row-heading" scope="row">5</th>
+          <th class="row-heading" scope="row">6</th>
+        </tr>
 
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
+        <tr id="fifth">
+          <th class="row-heading" scope="row">5</th>
 
-        <th class="row-heading" scope="row">5</th>
-      </tr>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
 
-      <tr id="fourth">
-        <th class="row-heading" scope="row">4</th>
+          <th class="row-heading" scope="row">5</th>
+        </tr>
 
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
+        <tr id="fourth">
+          <th class="row-heading" scope="row">4</th>
 
-        <th class="row-heading" scope="row">4</th>
-      </tr>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
 
-
-      <tr id="third">
-        <th class="row-heading" scope="row">3</th>
-
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-
-        <th class="row-heading" scope="row">3</th>
-      </tr>
-
-      <tr id="second">
-        <th class="row-heading" scope="row">2</th>
-
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-
-        <th class="row-heading" scope="row">2</th>
-      </tr>
-
-      <tr id="first">
-        <th class="row-heading" scope="row">1</th>
-
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-        <td class="dark"></td>
-        <td class="light"></td>
-
-        <th class="row-heading" scope="row">1</th>
-      </tr>
-
-      <tr class="col-heading">
-        <th scope="col"></th>
-        <th scope="col">A</th>
-        <th scope="col">B</th>
-        <th scope="col">C</th>
-        <th scope="col">D</th>
-        <th scope="col">E</th>
-        <th scope="col">F</th>
-        <th scope="col">G</th>
-        <th scope="col">H</th>
-      </tr>
-    </table>
-
-    <nav>
-      <button>Rewind</button>
-      <button>Step Back</button>
-      <button>Play/Pause</button>
-      <button>Step Forward</button>
-      <button>Fast Forward</button>
-    </nav>
+          <th class="row-heading" scope="row">4</th>
+        </tr>
 
 
+        <tr id="third">
+          <th class="row-heading" scope="row">3</th>
 
-  </body>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
 
-<html>
+          <th class="row-heading" scope="row">3</th>
+        </tr>
+
+        <tr id="second">
+          <th class="row-heading" scope="row">2</th>
+
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+
+          <th class="row-heading" scope="row">2</th>
+        </tr>
+
+        <tr id="first">
+          <th class="row-heading" scope="row">1</th>
+
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+          <td class="dark"></td>
+          <td class="light"></td>
+
+          <th class="row-heading" scope="row">1</th>
+        </tr>
+
+        <tr class="col-heading">
+          <th scope="col"></th>
+          <th scope="col">A</th>
+          <th scope="col">B</th>
+          <th scope="col">C</th>
+          <th scope="col">D</th>
+          <th scope="col">E</th>
+          <th scope="col">F</th>
+          <th scope="col">G</th>
+          <th scope="col">H</th>
+        </tr>
+      </table>
+
+      <nav>
+        <button>Rewind</button>
+        <button>Step Back</button>
+        <button>Play/Pause</button>
+        <button>Step Forward</button>
+        <button>Fast Forward</button>
+      </nav>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
