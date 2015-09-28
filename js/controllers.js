@@ -1,3 +1,4 @@
+
 (function(globals){ // What is this even? Do I need it?
   /**
    * Your pattern for Controller code:
@@ -7,6 +8,7 @@
    * 3. What `CALLBACK` should be run when the interaction happens?
    * 4. What should my `CALLBACK` do with it's `EVENT`...?
    */
+/*
   document.querySelector(SELECTOR)
     .addEventListener(TYPE, CALLBACK);
   // AKA
@@ -16,33 +18,43 @@
     // Do something with Models and Views...
     // Maybe do something with EVENT...?
   }
-
+*/
 
   // Controller for "next move"...
-  jQuery('button#forward').on('click', function(event){
-    console.log("tracer");
+  jQuery('#forward').on('click', function(event){
     // TODO: Fire tracer bullet!
+    console.log("tracer1");
     // TODO: Tell the Model -- `game` -- to advance to the next move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "previous move"...
-  jQuery(/* your "previous move" button */).on('click', function(event){
+  jQuery('#back').on('click', function(event){
     // TODO: Fire tracer bullet!
+    console.log("tracer 2");
     // TODO: Tell the Model -- `game` -- to advance to the previous move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "fast-forward"...
-  jQuery(/* your "fast-forward" button */).on(/* wat? */, function(event){
+  jQuery('button#end').on('click', function(event){
     // TODO: Fire tracer bullet!
+    console.log("tracer 3");
     // TODO: Tell the Model -- `game` -- to advance to the last move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for anything else...
-  jQuery(/* any other buttons out there? */).on(/* dunno */, function(event){
+  jQuery('button#rewind').on('click', function(event){
     // TODO: Fire tracer bullet!
+    console.log("tracer 4");
+    // TODO: Tell the Model -- `game` -- to do something it knows how to do...
+    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+  });
+
+  jQuery('button#play').on('click', function(event){
+    // TODO: Fire tracer bullet!
+    console.log("tracer 5");
     // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
