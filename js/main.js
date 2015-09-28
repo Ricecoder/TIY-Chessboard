@@ -9,6 +9,7 @@
    * @see initial
    * @var {Array} of {Array} of {String|null}
    */
+
   var board = initial(); // initialize the `board`
 
   /**
@@ -19,8 +20,20 @@
    * @var {Array} of...?
    */
   var moves = [
-    // TODO: Fill me in!
-  ]; // END moves
+      [[6,3], [0,6], [6,2], [1,4], [6,6], [1,3], [7,5], [0,5], [7,6]],
+      [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
+      ]; // END moves
+
+    var from = moves[0];
+    var to = moves[1];
+    console.log(from[[0]], to[[0]]);
+
+
+
+
+
+
+   // END moves
 
   // var current;
 
@@ -94,8 +107,9 @@
       }
 
       return bullet;
+       console.log(game.tracer);
     },
-  }; // END game
+   // END game
 
   /**
    * Apply a move to the game board, given a `from` and `to` position that both
@@ -107,10 +121,12 @@
    *
    * @todo Fill me in! ...and remove this comment.
    */
-  function applyMove(from, to){
-    // You should write something in here...
+   applyMove: function (from, to){
+    board.to = board.from;
+    board.from = null;
   } // END applyMove
-
+};
+console.log(game.applyMove([0],[0]));
   /**
    * Provide the initial state of the game board, useful for any game.
    *
