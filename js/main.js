@@ -20,9 +20,13 @@
      * @see applyMove
      * @var {Array} of...?
      */
-    var moves = [
-      // TODO: Fill me in!
+    var moves = [                   //list with an object whose parameter "from"
+      {from:{rank: " ", file: " "}, //has a value of another object with the parameters of "rank"
+       to:{rank: " ", file: " "}    //and "file" whose properties will correlate to the position of the
+     };                             //piece on the board before moving. The first obj also has a parameter "to" with
+                                    //the value of another obj with "rank" and "file". In example " " are used as a placeholder.
     ]; // END moves
+
 
     // var current; TODO: do we need this?
 
