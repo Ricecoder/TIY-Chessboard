@@ -1,16 +1,4 @@
-(function(globals){
-// Don't worry if that seems a little funky...
 
-  /**
-   * Internal representation of the game board in its current state.
-   *
-   * @see game.board
-   * @see game.tracer
-   * @see initial
-   * @var {Array} of {Array} of {String|null}
-   */
-
-  var board = initial(); // initialize the `board`
 
   (function(globals){
   // Don't worry if that seems a little funky...
@@ -140,7 +128,7 @@
         [ 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p' ],
         [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' ],
       ];
-    } // END initial
+    }; // END initial
 
   // You are not expected to understand anything below this line...
   })(window || module && module.exports || this);
