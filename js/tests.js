@@ -32,6 +32,15 @@ it('should return an object', function(){
   chai.expect(game.reset()).to.be.an('object');
 });
 
+it.skip('should be a dictionary', function(){             //moves is not defined?
+  chai.expect(global.moves[0]).to.be.an('object');
+});
 
+it('should be a function', function(){
+  chai.expect(game.applyMove).to.be.a('function');
+});
 
+it('should be return an array', function(){                 //cannot call the function if moves is not defined?
+  chai.expect(game.applyMove(moves[0])).to.be.an('array');
+});
 })(window || module && module.exports || this);
