@@ -20,11 +20,43 @@
      * @see applyMove
      * @var {Array} of...?
      */
-    var moves = [                   //list with an object whose parameter "from"
-      {from:{rank: " ", file: " "}, //has a value of another object with the parameters of "rank"
-       to:{rank: " ", file: " "}    //and "file" whose properties will correlate to the position of the
-     };                             //piece on the board before moving. The first obj also has a parameter "to" with
-                                    //the value of another obj with "rank" and "file". In example " " are used as a placeholder.
+    var moves = [
+      {from:{rank: 6, file: 3},
+       to:{rank: 4, file: 3}
+     },
+
+      {from:{rank: 6, file: 2},
+       to:{rank: 4, file: 2}
+     },
+
+      {from:{rank: 6, file: 4},
+       to:{rank: 5, file: 6}
+     },
+
+      {from:{rank: 7, file: 5},
+       to:{rank: 6, file: 6}
+     },
+
+      {from:{rank: 7, file: 6},
+       to:{rank: 5, file: 5}
+     },
+
+      {from:{rank: 0, file: 6},
+       to:{rank: 2, file: 5}
+     },
+
+      {from:{rank: 1, file: 4},
+       to:{rank: 2, file: 4}
+     },
+
+      {from:{rank: 1, file: 3},
+       to:{rank: 3, file: 3}
+     },
+
+      {from:{rank: 0, file: 5},
+       to:{rank: 1, file: 5}
+     },
+
     ]; // END moves
 
 
@@ -112,7 +144,9 @@
        * @todo Fill me in! ...and remove this comment.
        */
       applyMove: function (from, to){
-        // You should write something in here...
+        moves[0].from = moves[0].to;
+        moves[0].from = null;
+
       } // END applyMove
     }; // END game
 
