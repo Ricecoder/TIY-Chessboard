@@ -100,12 +100,14 @@ textarea {
     width: auto;
   }
 
+//-------CHESSBOARD-----------------------------
    .chessboard {
      font-size: 14pt;
      border-spacing: 0px;
      width: 100%;
      padding: 20%;
      padding-bottom: 2%;
+
 
      thead {
 
@@ -119,12 +121,89 @@ textarea {
        padding-bottom: 10%;
      }
 
+//-----BLACK PIECES------------------------
+     .blkR::before {
+       content: "\265c";
+       position: absolute;
+     }
+
+     .blkN::before {
+       content: "\265e";
+       position: absolute;
+
+     }
+
+     .blkB::before {
+       content: "\265d";
+       position: absolute;
+
+     }
+
+     .blkQ::before {
+       content: "\265b";
+       position: absolute;
+
+     }
+
+     .blkK::before {
+       content: "\265a";
+       position: absolute;
+
+     }
+
+     .blkP::before {
+       content: "\265f";
+       position: absolute;
+
+     }
+
+//---------WHITE PIECES-------------------------
+     .whtR::before {
+       content: "\2656";
+       position: absolute;
+
+     }
+
+     .whtN::before {
+       content: "\2658";
+       position: absolute;
+
+     }
+
+     .whtB::before {
+       content: "\2657";
+       position: absolute;
+
+     }
+
+     .whtQ::before {
+       content: "\2655";
+       position: absolute;
+
+     }
+
+     .whtK::before {
+       content: "\2654";
+       position: absolute;
+
+     }
+
+     .whtP::before {
+       content: "\2659";
+       position: absolute;
+
+     }
+
+//------SQUARE STYLES-------------------------------------
+
      .light {
-       background-color: tan;
+       background-color: white;
+       font-size: 3vw;
      }
 
      .dark {
-       background-color: navy;
+       background-color: tan;
+       font-size: 3vw;
      }
 
      th {
@@ -133,7 +212,7 @@ textarea {
 
    } //end .chessboard
 
-
+//-------BUTTONS--------------------------------------
    nav {
      display: block;
      text-align: center;
