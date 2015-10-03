@@ -59,7 +59,16 @@
 
     ]; // END moves
 
-  
+    var firstMove = moves[0];
+    var secondMove = moves[1];
+    var thirdMove = moves[2];
+    var fourthMove = moves[3];
+    var fifthMove = moves[4];
+    var sixthMove = moves[5];
+    var seventhMove = moves[6];
+    var eightMove = moves[7];
+    var ninthMove = moves[8];
+
     // var current; TODO: do we need this?
 
     // You don't need to understand `globals` yet...
@@ -147,8 +156,9 @@
        * @todo Fill me in! ...and remove this comment.
        */
       applyMove: function (from, to){
-        moves[0].from = moves[0].to;
-        moves[0].from = null;
+        board[4][3] = board[6][3];
+        board[6][3] = null;
+        
 
       } // END applyMove
     }; // END game
