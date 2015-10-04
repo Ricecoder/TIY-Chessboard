@@ -2,13 +2,15 @@
 ;(function(globals){ // That damn IIFE again!
 // Your code BELOW here...
 
+
   // Because the game board only corresponds to the `tbody` element...
   var $chessboard = jQuery('.chessboard tbody');
   // I always start variable names with `$` when they reference `jQuery.Collection` values
 
   // This looks strangely familiar... is that COPY-PASTA!?
   // TODO: Don't use COPY-PASTA!
-  var gameboard = [
+  var gameboard =
+  [
     [ 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' ],
     [ 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' ],
     Array(8).fill(null),
@@ -18,6 +20,7 @@
     [ 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p' ],
     [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' ],
   ];
+
 
   // You could also use nested `for` loops, but this is better...
   jQuery(gameboard).each(function(rank, row){
@@ -30,9 +33,15 @@
       console.log($square.get(), rank, file, piece);
       // Use the log, Luke!
 
-      if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
+      if (piece) {
+        $square.text(piece);
+        console.log($square.text());
+
+      }  // Not _exactly_ what we discussed in class...
         // TODO: Convert `square` to class name(s)
+
         // TODO: Add class name(s) to `td` instead
+
     });
   });
 
