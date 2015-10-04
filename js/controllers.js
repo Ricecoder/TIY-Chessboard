@@ -25,7 +25,31 @@
     // console.log("tracer1");
     game.next();
     console.log(game.tracer());
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+
+    //TESTING
+    jQuery(gameboard).each(function(rank, row){
+      jQuery(row).each(function(file, piece){
+        // http://stackoverflow.com/questions/1442925/how-to-get-nth-jquery-element
+        var $square = $chessboard
+          .find('tr').eq(rank) // Get the `tr` inside the `chessboard` for the `rank`
+          .find('td').eq(file) // Get the `td` inside the `tr` for the `file`
+
+        console.log($square.get(), rank, file, piece);
+        // Use the log, Luke!
+
+        if (piece) {
+          $square.text(piece);
+          console.log($square.text());
+
+        }  // Not _exactly_ what we discussed in class...
+          // TODO: Convert `square` to class name(s)
+
+          // TODO: Add class name(s) to `td` instead
+
+      });
+    });
+  //END
+
   });
 
   // Controller for "previous move"...
