@@ -59,7 +59,7 @@
 
     ]; // END moves
 
-    var current = this.moves;
+    var current = 0;
     //var current = var counter??
 
     // var current; TODO: do we need this?
@@ -93,14 +93,14 @@
        * @todo Make this work!
        */
       next: function(){
-        if (current = moves[0]) {
-          moves[0] += moves[1];
+        if (current < moves.length) {
+          game.applyMove(moves[current].from , moves[current].to);
+          current += 1;
         };
 
-        if (current = moves[1]) {
-          moves[1] += moves[2]);
-        }                        
-        console.log(game.tracer(game.applyMove));
+
+
+        // console.log(game.tracer(game.applyMove));
 
         return this;
       },
@@ -111,7 +111,11 @@
        * @todo Make this work!
        */
       prev: function(){
-        // need a function that iterates backwards through the moves array one move.
+        if (current < moves.length) {
+          game.applyMove(moves[current].from , moves[current].to);
+          current -= 1;
+        };
+
         return this;
       },
       /**
@@ -169,11 +173,11 @@
         // var eightMove = moves[7];
         // var ninthMove = moves[8];
 
-        // board[to.rank][to.file] = board[from.rank][from.file];
-        // board[from.rank][from.file] = null;
+        board[to.rank][to.file] = board[from.rank][from.file];
+        board[from.rank][from.file] = null;
 
-        board.moves[0].to.rank.to.file =  board.moves[0].from.rank.from.file;
-        board.moves[0].from.rank.from.file = null;
+        // board.moves[current].to.rank.to.file =  board.moves[current].from.rank.from.file;
+        // board.moves[current].from.rank.from.file = null;
 
         // board[4][3] = board[6][3];
         // board[6][3] = null;
