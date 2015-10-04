@@ -59,9 +59,9 @@
 
     ]; // END moves
 
-
+    var current = this.moves;
     //var current = var counter??
-    
+
     // var current; TODO: do we need this?
 
     // You don't need to understand `globals` yet...
@@ -92,8 +92,16 @@
        * @return {Object} the game object for Method Chaining
        * @todo Make this work!
        */
-      next: function(){          //need function that iterates through moves starting
-                                //with the last move and going forward one move.
+      next: function(){
+        if (current = moves[0]) {
+          moves[0] += moves[1];
+        };
+
+        if (current = moves[1]) {
+          moves[1] += moves[2]);
+        }                        
+        console.log(game.tracer(game.applyMove));
+
         return this;
       },
       /**
@@ -149,15 +157,17 @@
        * @todo Fill me in! ...and remove this comment.
        */
       applyMove: function (from, to){
-        var firstMove = moves[0];
-        var secondMove = moves[1];
-        var thirdMove = moves[2];
-        var fourthMove = moves[3];
-        var fifthMove = moves[4];
-        var sixthMove = moves[5];
-        var seventhMove = moves[6];
-        var eightMove = moves[7];
-        var ninthMove = moves[8];
+
+    //DO I EVEN NEED THESE???
+        // var firstMove = moves[0];
+        // var secondMove = moves[1];
+        // var thirdMove = moves[2];
+        // var fourthMove = moves[3];
+        // var fifthMove = moves[4];
+        // var sixthMove = moves[5];
+        // var seventhMove = moves[6];
+        // var eightMove = moves[7];
+        // var ninthMove = moves[8];
 
         // board[to.rank][to.file] = board[from.rank][from.file];
         // board[from.rank][from.file] = null;
