@@ -59,16 +59,9 @@
 
     ]; // END moves
 
-    var firstMove = moves[0];
-    var secondMove = moves[1];
-    var thirdMove = moves[2];
-    var fourthMove = moves[3];
-    var fifthMove = moves[4];
-    var sixthMove = moves[5];
-    var seventhMove = moves[6];
-    var eightMove = moves[7];
-    var ninthMove = moves[8];
 
+    //var current = var counter??
+    
     // var current; TODO: do we need this?
 
     // You don't need to understand `globals` yet...
@@ -99,8 +92,8 @@
        * @return {Object} the game object for Method Chaining
        * @todo Make this work!
        */
-      next: function(){
-        // Doesn't this seem to be missing something?
+      next: function(){          //need function that iterates through moves starting
+                                //with the last move and going forward one move.
         return this;
       },
       /**
@@ -110,7 +103,7 @@
        * @todo Make this work!
        */
       prev: function(){
-        // Another good place for code...
+        // need a function that iterates backwards through the moves array one move.
         return this;
       },
       /**
@@ -120,7 +113,7 @@
        * @todo Make this work!
        */
       end: function(){
-        // Write some code here...
+        //need a function that applies all moves at one.
         return this;
       },
       /**
@@ -156,9 +149,27 @@
        * @todo Fill me in! ...and remove this comment.
        */
       applyMove: function (from, to){
-        board[4][3] = board[6][3];
-        board[6][3] = null;
-        
+        var firstMove = moves[0];
+        var secondMove = moves[1];
+        var thirdMove = moves[2];
+        var fourthMove = moves[3];
+        var fifthMove = moves[4];
+        var sixthMove = moves[5];
+        var seventhMove = moves[6];
+        var eightMove = moves[7];
+        var ninthMove = moves[8];
+
+        // board[to.rank][to.file] = board[from.rank][from.file];
+        // board[from.rank][from.file] = null;
+
+        board.moves[0].to.rank.to.file =  board.moves[0].from.rank.from.file;
+        board.moves[0].from.rank.from.file = null;
+
+        // board[4][3] = board[6][3];
+        // board[6][3] = null;
+
+        console.log(game.tracer(game.applyMove));
+
 
       } // END applyMove
     }; // END game
