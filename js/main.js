@@ -133,7 +133,10 @@
       play: function(){
         for(current = 0; current < moves.length; current++) {
           game.applyMove(moves[current].from , moves[current].to);
+          console.log(game.tracer(game.applyMove));
+
         }
+
         return this;
       },
       /**
@@ -190,7 +193,7 @@
         // board[4][3] = board[6][3];
         // board[6][3] = null;
 
-        console.log(game.tracer(game.applyMove));
+      //  console.log(game.tracer(game.applyMove));
 
 
       } // END applyMove
