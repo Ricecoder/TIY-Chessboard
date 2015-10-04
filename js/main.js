@@ -98,8 +98,6 @@
           current += 1;
         };
 
-
-
         // console.log(game.tracer(game.applyMove));
 
         return this;
@@ -111,9 +109,10 @@
        * @todo Make this work!
        */
       prev: function(){
-        if (current < moves.length) {
-          game.applyMove(moves[current].from , moves[current].to);
+        if (current >= 0) {
           current -= 1;
+          game.applyMove(moves[current].to , moves[current].from);
+
         };
 
         return this;
@@ -125,7 +124,16 @@
        * @todo Make this work!
        */
       end: function(){
-        //need a function that applies all moves at one.
+        for(current = 0; current < moves.length; current++) {
+          game.applyMove(moves[current].from , moves[current].to);
+        }
+        return this;
+      },
+
+      play: function(){
+        for(current = 0; current < moves.length; current++) {
+          game.applyMove(moves[current].from , moves[current].to);
+        }
         return this;
       },
       /**
