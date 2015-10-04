@@ -24,6 +24,7 @@
   jQuery('#forward').on('click', function(event){
     console.log("tracer1");
     game.next();
+    console.log(game.tracer());
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
@@ -31,6 +32,7 @@
   jQuery('#back').on('click', function(event){
     console.log("tracer 2");
     game.prev();
+    console.log(game.tracer());
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
@@ -38,6 +40,7 @@
   jQuery('button#end').on('click', function(event){
     console.log("tracer 3");
     game.end();
+    console.log(game.tracer());
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
