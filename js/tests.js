@@ -49,10 +49,7 @@ it('should move one piece', function(){
 
 
   //action
-  chai.expect(game.applyMove(
-    {rank: 6, to: 3},
-    {rank: 4, to: 3}
-  )).to.equal(undefined);
+  chai.expect(game.applyMove()).to.equal(undefined);
 
 // game.reset();
   //post condition
