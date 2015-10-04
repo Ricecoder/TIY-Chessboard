@@ -22,7 +22,7 @@
 
   // Controller for "next move"...
   jQuery('#forward').on('click', function(event){
-    console.log("tracer1");
+    // console.log("tracer1");
     game.next();
     console.log(game.tracer());
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
@@ -30,7 +30,7 @@
 
   // Controller for "previous move"...
   jQuery('#back').on('click', function(event){
-    console.log("tracer 2");
+    // console.log("tracer 2");
     game.prev();
     console.log(game.tracer());
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
@@ -38,7 +38,7 @@
 
   // Controller for "fast-forward"...
   jQuery('button#end').on('click', function(event){
-    console.log("tracer 3");
+    // console.log("tracer 3");
     game.end();
     console.log(game.tracer());
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
@@ -46,16 +46,14 @@
 
   // Controller for anything else...
   jQuery('button#rewind').on('click', function(event){
-    console.log("tracer 4");
+    // console.log("tracer 4");
     game.reset();
     console.log(game.tracer());
 
   });
 
   jQuery('button#play').on('click', function(event){
-    // TODO: Fire tracer bullet!
-    console.log("tracer 5");
-    // TODO: Tell the Model -- `game` -- to do something it knows how to do...
+    // console.log("tracer 5");
     game.play();
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
