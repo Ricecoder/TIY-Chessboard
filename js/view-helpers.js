@@ -35,8 +35,8 @@
       // Use the log, Luke!
 
       if (piece) {
-        $square.text(piece);
-
+         $square.text(piece);
+        //$square.addClass('blkP')    USE THIS CONCEPT TO FIX THE TEXT ON THE BOARD
         console.log($square.text());
 
       }  // Not _exactly_ what we discussed in class...

@@ -81,10 +81,10 @@ function view () {
       //   //$square.text(piece);  //need to remove class from current add class to new current
       // }
 //WHY DOES THIS EVEN????!!!! vvv
-      if ($square.text(piece) === 'p') {
-        // jQuery('td.dark').addClass('blkP');
-
-      }
+      // if ($square.text(piece) === 'p') {
+      //   // jQuery('td.dark').addClass('blkP');
+      //
+      // }
       //https://api.jquery.com/contains-selector/
       jQuery("td:contains('p')").addClass('blkP');
       jQuery("td:contains('N')").addClass('whtN');
