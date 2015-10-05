@@ -77,12 +77,12 @@ function view () {
       console.log($square.get(), rank, file, piece);
       // Use the log, Luke!
 
-      if (piece) {
-        $square.text(piece);  //need to remove class from current add class to new current
-      }
+      // if (piece) {
+      //   //$square.text(piece);  //need to remove class from current add class to new current
+      // }
 //WHY DOES THIS EVEN????!!!! vvv
       if ($square.text(piece) === 'p') {
-        jQuery('td.dark').addClass('blkP');
+        // jQuery('td.dark').addClass('blkP');
 
       }
       //https://api.jquery.com/contains-selector/
@@ -92,15 +92,6 @@ function view () {
       jQuery("td:contains('n')").addClass('blkN');
       jQuery("td:contains('b')").addClass('blkB');
       jQuery("td:contains('B')").addClass('whtB');
-
-
-
-      jQuery("td:contains('null')").removeClass('blkP');
-
-
-
-
-
 
 
       //http://stackoverflow.com/questions/14022208/jquery-selecting-what-does-not-contains-something
