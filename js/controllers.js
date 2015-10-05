@@ -42,7 +42,7 @@
     // console.log("tracer 3");
     game.end();
     console.log(game.tracer());
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+    view()
   });
 
   // Controller for anything else...
@@ -50,13 +50,14 @@
     // console.log("tracer 4");
     game.reset();
     console.log(game.tracer());
+    view();
 
   });
 
   jQuery('button#play').on('click', function(event){
     // console.log("tracer 5");
     game.play();
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+    view();
   });
 
   //TESTING
@@ -79,10 +80,37 @@ function view () {
       if (piece) {
         $square.text(piece);  //need to remove class from current add class to new current
       }
-
+//WHY DOES THIS EVEN????!!!! vvv
       if ($square.text(piece) === 'p') {
+        jQuery('td.dark').addClass('blkP');
 
       }
+      //https://api.jquery.com/contains-selector/
+      jQuery("td:contains('p')").addClass('blkP');
+      jQuery("td:contains('N')").addClass('whtN');
+      jQuery("td:contains('P')").addClass('whtP');
+      jQuery("td:contains('n')").addClass('blkN');
+      jQuery("td:contains('b')").addClass('blkB');
+      jQuery("td:contains('B')").addClass('whtB');
+
+
+
+      jQuery("td:contains('null')").removeClass('blkP');
+
+
+
+
+
+
+
+      //http://stackoverflow.com/questions/14022208/jquery-selecting-what-does-not-contains-something
+      jQuery("td:not(:contains('p'))").removeClass('blkP');
+      jQuery("td:not(:contains('N'))").removeClass('whtN');
+      jQuery("td:not(:contains('P'))").removeClass('whtP');
+      jQuery("td:not(:contains('n'))").removeClass('blkN');
+      jQuery("td:not(:contains('b'))").removeClass('blkB');
+      jQuery("td:not(:contains('B'))").removeClass('whtB');
+
 
 
 
