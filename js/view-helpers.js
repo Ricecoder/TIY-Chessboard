@@ -36,6 +36,7 @@
 
       if (piece) {
         $square.text(piece);
+
         console.log($square.text());
 
       }  // Not _exactly_ what we discussed in class...
