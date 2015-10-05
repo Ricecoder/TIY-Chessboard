@@ -34,7 +34,7 @@
     // console.log("tracer 2");
     game.prev();
     console.log(game.tracer());
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+    view();
   });
 
   // Controller for "fast-forward"...
@@ -60,36 +60,46 @@
   });
 
   //TESTING
-//Moved to view-helpers.js
 
-// function view () {
-//   var $chessboard = jQuery('.chessboard tbody');
-//   var gameboard = game.board;
-//
-//   jQuery(gameboard).each(function(rank, row){
-//     jQuery(row).each(function(file, piece){
-//       // http://stackoverflow.com/questions/1442925/how-to-get-nth-jquery-element
-//       var $square = $chessboard
-//         .find('tr').eq(rank) // Get the `tr` inside the `chessboard` for the `rank`
-//         .find('td').eq(file) // Get the `td` inside the `tr` for the `file`
-//
-//       console.log($square.get(), rank, file, piece);
-//       // Use the log, Luke!
-//
-//       if (piece) {
-//
-//         $square.text(piece);  //remove class from current add class to new current
-//       }
-//       else {
-//         $square.text = " ";
-//       }
-//         // TODO: Convert `square` to class name(s)
-//
-//         // TODO: Add class name(s) to `td` instead
-//     });
-//
-//   });
-// };
+
+function view () {
+  var $chessboard = jQuery('.chessboard tbody');
+  var gameboard = game.board();
+
+  jQuery(gameboard).each(function(rank, row){
+    jQuery(row).each(function(file, piece){
+      // http://stackoverflow.com/questions/1442925/how-to-get-nth-jquery-element
+      var $square = $chessboard
+        .find('tr').eq(rank) // Get the `tr` inside the `chessboard` for the `rank`
+        .find('td').eq(file) // Get the `td` inside the `tr` for the `file`
+
+      console.log($square.get(), rank, file, piece);
+      // Use the log, Luke!
+
+      if (piece) {
+        $square.text(piece);  //need to remove class from current add class to new current
+      }
+
+      if ($square.text(piece) === 'p') {
+
+      }
+
+
+
+//strangely allows me to move the text but not the 'piece'
+      // if ($square.text(piece) === 'p') {
+      //   // $('td.dark').addClass('.blkP');
+      //   // $('td.dark.blkP').removeClass('.blkP');
+      //
+      // }
+
+        // TODO: Convert `square` to class name(s)
+
+        // TODO: Add class name(s) to `td` instead
+    });
+
+  });
+};
 // //END
 // Am I supposed to recognize this?
 })(window || module && module.exports || this)
