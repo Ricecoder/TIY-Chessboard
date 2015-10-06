@@ -94,74 +94,131 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   table {
+  main {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: auto;
+  }
+
+//-------CHESSBOARD-----------------------------
+   .chessboard {
      font-size: 14pt;
-     //
-    //  margin-top: 10px;
-    //  margin-bottom: 10px;
-    //  border: 0px;
      border-spacing: 0px;
-     display: block;
+     width: 100%;
+     padding: 20%;
+     padding-bottom: 2%;
+
 
      thead {
 
-        .col-heading {
-         //  margin-top: 10px;
-         //  margin-bottom: 10px;
-          display: inline-block;
-
-        }
-
-        th.col-heading {
-          width: 50px;
-          height: 50px;
+        th {
+          padding-bottom: 2%;
         }
      }
 
-     tr{
-       border: 0px;
+     td {
+       width: 10%;
+       padding-bottom: 10%;
      }
+
+//-----BLACK PIECES------------------------
+     .blkR::before {
+       content: "\265c";
+       position: absolute;
+     }
+
+     .blkN::before {
+       content: "\265e";
+       position: absolute;
+
+     }
+
+     .blkB::before {
+       content: "\265d";
+       position: absolute;
+
+     }
+
+     .blkQ::before {
+       content: "\265b";
+       position: absolute;
+
+     }
+
+     .blkK::before {
+       content: "\265a";
+       position: absolute;
+
+     }
+
+     .blkP::before {
+       content: "\265f";
+       position: absolute;
+
+     }
+
+//---------WHITE PIECES-------------------------
+     .whtR::before {
+       content: "\2656";
+       position: absolute;
+
+     }
+
+     .whtN::before {
+       content: "\2658";
+       position: absolute;
+
+     }
+
+     .whtB::before {
+       content: "\2657";
+       position: absolute;
+
+     }
+
+     .whtQ::before {
+       content: "\2655";
+       position: absolute;
+
+     }
+
+     .whtK::before {
+       content: "\2654";
+       position: absolute;
+
+     }
+
+     .whtP::before {
+       content: "\2659";
+       position: absolute;
+
+     }
+
+//------SQUARE STYLES-------------------------------------
 
      .light {
-       height: 50px;
-       width: 50px;
-       background-color: tan;
-       display: inline-block;
+       background-color: white;
+       font-size: 3vw;
+  
      }
 
      .dark {
-       height: 50px;
-       width: 50px;
-       background-color: navy;
-       display: inline-block;
+       background-color: tan;
+       font-size: 3vw;
      }
-
-
-  tfoot {
-    float: left;
-
-  }
-
 
      th {
-       width: 50px;
-
+       padding-top: 2%;
     }
 
-     .row-heading {
-       display: inline-block;
-       margin: 10px;
-     }
+   } //end .chessboard
 
-
-
-   }
-
-
+//-------BUTTONS--------------------------------------
    nav {
      display: block;
-     margin: 35px;
-     clear:left;
+     text-align: center;
+    //  padding-top: 2%;
+
    }
 
 

@@ -9,12 +9,13 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css"></link>
-        <link rel="stylesheet" href="css/normalize.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"></link> -->
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/controllers.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -22,8 +23,8 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-
-      <table>
+    <main class="container">
+      <table class="chessboard">
         <thead>
         <tr class="col-heading">
           <th scope="col"></th>
@@ -43,14 +44,14 @@
         <tr id="eighth">
           <th class="row-heading" scope="row">8</th>
 
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
+          <td class="light whtR"></td>
+          <td class="dark whtN"></td>
+          <td class="light whtB"></td>
+          <td class="dark whtQ"></td>
+          <td class="light whtK"></td>
+          <td class="dark whtB"></td>
+          <td class="light whtN"></td>
+          <td class="dark whtR"></td>
 
           <th class="row-heading" scope="row">8</th>
         </tr>
@@ -58,14 +59,14 @@
         <tr id="seventh">
           <th class="row-heading" scope="row">7</th>
 
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
+          <td class="dark whtP"></td>
+          <td class="light whtP"></td>
+          <td class="dark whtP"></td>
+          <td class="light whtP"></td>
+          <td class="dark whtP"></td>
+          <td class="light whtP"></td>
+          <td class="dark whtP"></td>
+          <td class="light whtP"></td>
 
           <th class="row-heading" scope="row">7</th>
         </tr>
@@ -134,14 +135,14 @@
         <tr id="second">
           <th class="row-heading" scope="row">2</th>
 
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
+          <td class="light blkP"></td>
+          <td class="dark blkP"></td>
+          <td class="light blkP"></td>
+          <td class="dark blkP"></td>
+          <td class="light blkP"></td>
+          <td class="dark blkP"></td>
+          <td class="light blkP"></td>
+          <td class="dark blkP"></td>
 
           <th class="row-heading" scope="row">2</th>
         </tr>
@@ -149,14 +150,14 @@
         <tr id="first">
           <th class="row-heading" scope="row">1</th>
 
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
-          <td class="dark"></td>
-          <td class="light"></td>
+          <td class="dark blkR"></td>
+          <td class="light blkN"></td>
+          <td class="dark blkB"></td>
+          <td class="light blkQ"></td>
+          <td class="dark blkK"></td>
+          <td class="light blkB"></td>
+          <td class="dark blkN"></td>
+          <td class="light blkR"></td>
 
           <th class="row-heading" scope="row">1</th>
         </tr>
@@ -183,10 +184,10 @@
         <button id="forward">Step Forward</button>
         <button id="end">Fast Forward</button>
       </nav>
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </main>
+        <script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/dist/jquery.min.js"></script>
         <script src="js/controllers.js"></script>
+
 
         </script>
 
@@ -194,6 +195,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/view-helpers.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

@@ -22,42 +22,103 @@
 
   // Controller for "next move"...
   jQuery('#forward').on('click', function(event){
-    // TODO: Fire tracer bullet!
-    console.log("tracer1");
-    // TODO: Tell the Model -- `game` -- to advance to the next move...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+    // console.log("tracer1");
+    game.next();
+    console.log(game.tracer());
+    view();
+
   });
 
   // Controller for "previous move"...
   jQuery('#back').on('click', function(event){
-    // TODO: Fire tracer bullet!
-    console.log("tracer 2");
-    // TODO: Tell the Model -- `game` -- to advance to the previous move...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+    // console.log("tracer 2");
+    game.prev();
+    console.log(game.tracer());
+    view();
   });
 
   // Controller for "fast-forward"...
   jQuery('button#end').on('click', function(event){
-    // TODO: Fire tracer bullet!
-    console.log("tracer 3");
-    // TODO: Tell the Model -- `game` -- to advance to the last move...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+    // console.log("tracer 3");
+    game.end();
+    console.log(game.tracer());
+    view()
   });
 
   // Controller for anything else...
   jQuery('button#rewind').on('click', function(event){
-    // TODO: Fire tracer bullet!
-    console.log("tracer 4");
-    // TODO: Tell the Model -- `game` -- to do something it knows how to do...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+    // console.log("tracer 4");
+    game.reset();
+    console.log(game.tracer());
+    view();
+
   });
 
   jQuery('button#play').on('click', function(event){
-    // TODO: Fire tracer bullet!
-    console.log("tracer 5");
-    // TODO: Tell the Model -- `game` -- to do something it knows how to do...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+    // console.log("tracer 5");
+    game.play();
+    view();
   });
 
+  //TESTING
+
+
+function view () {
+  var $chessboard = jQuery('.chessboard tbody');
+  var gameboard = game.board();
+
+  jQuery(gameboard).each(function(rank, row){
+    jQuery(row).each(function(file, piece){
+      // http://stackoverflow.com/questions/1442925/how-to-get-nth-jquery-element
+      var $square = $chessboard
+        .find('tr').eq(rank) // Get the `tr` inside the `chessboard` for the `rank`
+        .find('td').eq(file) // Get the `td` inside the `tr` for the `file`
+
+      console.log($square.get(), rank, file, piece);
+      // Use the log, Luke!
+
+      // if (piece) {
+      //   //$square.text(piece);  //need to remove class from current add class to new current
+      // }
+//WHY DOES THIS EVEN????!!!! vvv
+      // if ($square.text(piece) === 'p') {
+      //   // jQuery('td.dark').addClass('blkP');
+      //
+      // }
+      //https://api.jquery.com/contains-selector/
+      jQuery("td:contains('p')").addClass('blkP');
+      jQuery("td:contains('N')").addClass('whtN');
+      jQuery("td:contains('P')").addClass('whtP');
+      jQuery("td:contains('n')").addClass('blkN');
+      jQuery("td:contains('b')").addClass('blkB');
+      jQuery("td:contains('B')").addClass('whtB');
+
+
+      //http://stackoverflow.com/questions/14022208/jquery-selecting-what-does-not-contains-something
+      jQuery("td:not(:contains('p'))").removeClass('blkP');
+      jQuery("td:not(:contains('N'))").removeClass('whtN');
+      jQuery("td:not(:contains('P'))").removeClass('whtP');
+      jQuery("td:not(:contains('n'))").removeClass('blkN');
+      jQuery("td:not(:contains('b'))").removeClass('blkB');
+      jQuery("td:not(:contains('B'))").removeClass('whtB');
+
+
+
+
+//strangely allows me to move the text but not the 'piece'
+      // if ($square.text(piece) === 'p') {
+      //   // $('td.dark').addClass('.blkP');
+      //   // $('td.dark.blkP').removeClass('.blkP');
+      //
+      // }
+
+        // TODO: Convert `square` to class name(s)
+
+        // TODO: Add class name(s) to `td` instead
+    });
+
+  });
+};
+// //END
 // Am I supposed to recognize this?
 })(window || module && module.exports || this)

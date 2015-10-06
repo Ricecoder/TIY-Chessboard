@@ -40,7 +40,20 @@ it('should be a function', function(){
   chai.expect(game.applyMove).to.be.a('function');
 });
 
-it('should be return an array', function(){                 //cannot call the function if moves is not defined?
-  chai.expect(game.applyMove(moves[0])).to.be.an('array');
+it('should move one piece', function(){
+  var board = game.board();
+
+  //precondition
+  chai.expect(board[6][3]).to.equal('p');
+  chai.expect(board[4][3]).to.be.null;
+
+
+  //action
+  chai.expect(game.applyMove()).to.equal(undefined);
+
+// game.reset();
+  //post condition
+  chai.expect(board[6][3]).to.be.null;
+  chai.expect(board[4][3]).to.be.equal('p');
 });
 })(window || module && module.exports || this);
